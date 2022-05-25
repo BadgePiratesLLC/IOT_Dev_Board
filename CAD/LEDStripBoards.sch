@@ -1,0 +1,794 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "LED Strip Board"
+Date "2021-10-05"
+Rev "1"
+Comp "BadgePirates"
+Comment1 "ESP32-S2 WROVER"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L RF_Module:ESP32-S2-WROVER U2
+U 1 1 614897E3
+P 6250 4050
+F 0 "U2" H 6600 5300 50  0000 C CNN
+F 1 "ESP32-S2-WROVER" H 6650 5200 50  0000 C CNN
+F 2 "BadgePirate:ESP32-S2-WROVER" H 7000 2900 50  0001 C CNN
+F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-s2-wroom_esp32-s2-wroom-i_datasheet_en.pdf" H 5950 3250 50  0001 C CNN
+	1    6250 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 6149A82D
+P 2400 4950
+F 0 "D1" H 2393 4695 50  0000 C CNN
+F 1 "Pwr" H 2393 4786 50  0000 C BNN
+F 2 "BadgePirate:R_1206_3216Metric" H 2400 4950 50  0001 C CNN
+F 3 "~" H 2400 4950 50  0001 C CNN
+	1    2400 4950
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 614A3D64
+P 6250 5150
+F 0 "#PWR0101" H 6250 4900 50  0001 C CNN
+F 1 "GND" H 6255 4977 50  0000 C CNN
+F 2 "" H 6250 5150 50  0001 C CNN
+F 3 "" H 6250 5150 50  0001 C CNN
+	1    6250 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 614A62BE
+P 5850 2250
+F 0 "C1" H 5942 2296 50  0000 L CNN
+F 1 "0.1uF" H 5942 2205 50  0000 L CNN
+F 2 "BadgePirate:C_0805_2012Metric" H 5850 2250 50  0001 C CNN
+F 3 "~" H 5850 2250 50  0001 C CNN
+	1    5850 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 614A6CDA
+P 5250 2250
+F 0 "C2" H 5342 2296 50  0000 L CNN
+F 1 "22uF" H 5342 2205 50  0000 L CNN
+F 2 "BadgePirate:C_0805_2012Metric" H 5250 2250 50  0001 C CNN
+F 3 "~" H 5250 2250 50  0001 C CNN
+	1    5250 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 614A83F4
+P 1250 1050
+F 0 "#PWR0105" H 1250 800 50  0001 C CNN
+F 1 "GND" H 1255 877 50  0000 C CNN
+F 2 "" H 1250 1050 50  0001 C CNN
+F 3 "" H 1250 1050 50  0001 C CNN
+	1    1250 1050
+	0    1    1    0   
+$EndComp
+Text GLabel 6850 3250 2    50   Input ~ 0
+USB_TX_ESP_RX
+Text GLabel 6850 3350 2    50   Input ~ 0
+USB_RX_ESP_TX
+Text Notes 2250 4450 0    79   ~ 0
+Program
+Text Notes 1600 1900 0    79   ~ 0
+USB Mini Connector
+$Comp
+L power:GND #PWR0108
+U 1 1 614D67B1
+P 5250 2350
+F 0 "#PWR0108" H 5250 2100 50  0001 C CNN
+F 1 "GND" H 5255 2177 50  0000 C CNN
+F 2 "" H 5250 2350 50  0001 C CNN
+F 3 "" H 5250 2350 50  0001 C CNN
+	1    5250 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 614D7423
+P 5850 2350
+F 0 "#PWR0109" H 5850 2100 50  0001 C CNN
+F 1 "GND" H 5855 2177 50  0000 C CNN
+F 2 "" H 5850 2350 50  0001 C CNN
+F 3 "" H 5850 2350 50  0001 C CNN
+	1    5850 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 2150 5850 2150
+Wire Wire Line
+	6250 2150 6250 2850
+Connection ~ 5850 2150
+Wire Wire Line
+	5850 2150 6250 2150
+Wire Wire Line
+	5250 2150 5250 1950
+Connection ~ 5250 2150
+$Comp
+L Device:R_Small_US R5
+U 1 1 614A5061
+P 5400 4950
+F 0 "R5" V 5195 4950 50  0000 C CNN
+F 1 "10k" V 5286 4950 50  0000 C CNN
+F 2 "BadgePirate:R_1206_3216Metric" H 5400 4950 50  0001 C CNN
+F 3 "~" H 5400 4950 50  0001 C CNN
+	1    5400 4950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5650 4950 5500 4950
+Wire Wire Line
+	5300 4950 5100 4950
+$Comp
+L Connector:Conn_01x04_Female J2
+U 1 1 614DFD7A
+P 1950 5950
+F 0 "J2" H 1978 5926 50  0000 L CNN
+F 1 "JTAG" H 1978 5835 50  0000 L CNN
+F 2 "Digi:PinHeader_1x4_P2.54mm_Drill1.02mm" H 1950 5950 50  0001 C CNN
+F 3 "~" H 1950 5950 50  0001 C CNN
+	1    1950 5950
+	1    0    0    -1  
+$EndComp
+Text GLabel 1000 5850 0    50   Input ~ 0
+IO42
+Text GLabel 1000 5950 0    50   Input ~ 0
+IO41
+Text GLabel 1000 6050 0    50   Input ~ 0
+IO40
+Text GLabel 1000 6150 0    50   Input ~ 0
+IO39
+Wire Wire Line
+	1000 5850 1750 5850
+Text Label 1300 5850 0    50   ~ 0
+TMS
+Wire Wire Line
+	1000 5950 1750 5950
+Wire Wire Line
+	1000 6050 1750 6050
+Wire Wire Line
+	1000 6150 1750 6150
+Text Label 1300 5950 0    50   ~ 0
+TDI
+Text Label 1300 6050 0    50   ~ 0
+TDO
+Text Label 1300 6150 0    50   ~ 0
+TCK
+Text Notes 2500 6300 0    79   ~ 0
+JTAG
+Text GLabel 6850 3450 2    50   Input ~ 0
+IO42
+Text GLabel 6850 3550 2    50   Input ~ 0
+IO41
+Text GLabel 6850 3650 2    50   Input ~ 0
+IO40
+Text GLabel 6850 3750 2    50   Input ~ 0
+IO39
+$Comp
+L power:GND #PWR0113
+U 1 1 614FFF6E
+P 2550 4950
+F 0 "#PWR0113" H 2550 4700 50  0001 C CNN
+F 1 "GND" V 2555 4822 50  0000 R CNN
+F 2 "" H 2550 4950 50  0001 C CNN
+F 3 "" H 2550 4950 50  0001 C CNN
+	1    2550 4950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small_US R1
+U 1 1 61525792
+P 2150 4950
+F 0 "R1" H 2218 4996 50  0000 L CNN
+F 1 "R" H 2218 4905 50  0000 L CNN
+F 2 "BadgePirate:R_1206_3216Metric" H 2150 4950 50  0001 C CNN
+F 3 "~" H 2150 4950 50  0001 C CNN
+	1    2150 4950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR0110
+U 1 1 614B53FA
+P 2050 4950
+F 0 "#PWR0110" H 2050 4800 50  0001 C CNN
+F 1 "VCC" H 2065 5123 50  0000 C CNN
+F 2 "" H 2050 4950 50  0001 C CNN
+F 3 "" H 2050 4950 50  0001 C CNN
+	1    2050 4950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR0111
+U 1 1 614B8B89
+P 5250 1950
+F 0 "#PWR0111" H 5250 1800 50  0001 C CNN
+F 1 "VCC" H 5265 2123 50  0000 C CNN
+F 2 "" H 5250 1950 50  0001 C CNN
+F 3 "" H 5250 1950 50  0001 C CNN
+	1    5250 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0114
+U 1 1 614E0E6A
+P 5100 4950
+F 0 "#PWR0114" H 5100 4800 50  0001 C CNN
+F 1 "VCC" V 5115 5077 50  0000 L CNN
+F 2 "" H 5100 4950 50  0001 C CNN
+F 3 "" H 5100 4950 50  0001 C CNN
+	1    5100 4950
+	0    -1   -1   0   
+$EndComp
+Text GLabel 5650 3150 0    50   Input ~ 0
+Boot
+$Comp
+L Device:R_Small_US R4
+U 1 1 61502717
+P 1600 6750
+F 0 "R4" H 1668 6796 50  0000 L CNN
+F 1 "1k" H 1668 6705 50  0000 L CNN
+F 2 "BadgePirate:R_1206_3216Metric" H 1600 6750 50  0001 C CNN
+F 3 "~" H 1600 6750 50  0001 C CNN
+	1    1600 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0119
+U 1 1 615039AC
+P 1600 6650
+F 0 "#PWR0119" H 1600 6500 50  0001 C CNN
+F 1 "VCC" H 1615 6823 50  0000 C CNN
+F 2 "" H 1600 6650 50  0001 C CNN
+F 3 "" H 1600 6650 50  0001 C CNN
+	1    1600 6650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 6850 1600 6850
+Connection ~ 1600 6850
+NoConn ~ 1450 1350
+NoConn ~ 1250 950 
+Text GLabel 5650 3250 0    50   Input ~ 0
+IO01
+Text GLabel 5650 3350 0    50   Input ~ 0
+IO02
+Text GLabel 5650 3450 0    50   Input ~ 0
+IO03
+Text GLabel 5650 3550 0    50   Input ~ 0
+IO04
+Text GLabel 5650 3650 0    50   Input ~ 0
+IO05
+Text GLabel 5650 3750 0    50   Input ~ 0
+IO06
+Text GLabel 5650 3850 0    50   Input ~ 0
+IO07
+Text GLabel 5650 3950 0    50   Input ~ 0
+IO08
+Text GLabel 5650 4050 0    50   Input ~ 0
+IO09
+Text GLabel 5650 4150 0    50   Input ~ 0
+IO10
+Text GLabel 5650 4350 0    50   Input ~ 0
+IO12
+Text GLabel 5650 4250 0    50   Input ~ 0
+IO11
+Text GLabel 5650 4450 0    50   Input ~ 0
+IO13
+Text GLabel 5650 4550 0    50   Input ~ 0
+IO14
+Text GLabel 5650 4650 0    50   Input ~ 0
+IO15
+Text GLabel 5650 4750 0    50   Input ~ 0
+IO16
+Text GLabel 5650 4850 0    50   Input ~ 0
+IO17
+Text GLabel 6850 4550 2    50   Input ~ 0
+IO21
+Text GLabel 6850 4450 2    50   Input ~ 0
+IO26
+Text GLabel 6850 4350 2    50   Input ~ 0
+IO33
+Text GLabel 6850 4250 2    50   Input ~ 0
+IO34
+Text GLabel 6850 4150 2    50   Input ~ 0
+IO35
+Text GLabel 6850 4050 2    50   Input ~ 0
+IO36
+Text GLabel 6850 3950 2    50   Input ~ 0
+IO37
+Text GLabel 6850 3850 2    50   Input ~ 0
+IO38
+Text GLabel 6850 3150 2    50   Input ~ 0
+IO45
+Text GLabel 6850 3050 2    50   Input ~ 0
+IO46
+$Comp
+L Interface_USB:CH330N U3
+U 1 1 615912EF
+P 1900 2600
+F 0 "U3" H 1600 2150 50  0000 C CNN
+F 1 "CH330N" H 1600 2250 50  0000 C CNN
+F 2 "BadgePirate:SOIC-8-1EP_W3.9mm" H 1750 3350 50  0001 C CNN
+F 3 "http://www.wch.cn/downloads/file/240.html" H 1800 2800 50  0001 C CNN
+	1    1900 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:TLV1117-33 U4
+U 1 1 61591FD7
+P 1350 3950
+F 0 "U4" H 1350 4192 50  0000 C CNN
+F 1 "TLV1117-33" H 1350 4101 50  0000 C CNN
+F 2 "BadgePirate:SOT-223" H 1350 3950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tlv1117.pdf" H 1350 3950 50  0001 C CNN
+	1    1350 3950
+	1    0    0    -1  
+$EndComp
+Text GLabel 1650 1500 3    50   Input ~ 0
+D+
+Text GLabel 1550 1500 3    50   Input ~ 0
+D-
+$Comp
+L Connector:USB_B_Mini J3
+U 1 1 615A9312
+P 1650 1050
+F 0 "J3" V 1661 1380 50  0000 L CNN
+F 1 "USB_B_Mini" V 1752 1380 50  0000 L CNN
+F 2 "BadgePiratesFootprints:USB_Micro-B_Wuerth_629105150521" H 1800 1000 50  0001 C CNN
+F 3 "~" H 1800 1000 50  0001 C CNN
+	1    1650 1050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1650 1350 1650 1500
+Wire Wire Line
+	1550 1350 1550 1500
+Wire Wire Line
+	1850 1350 1850 1500
+Text GLabel 1500 2700 0    50   Input ~ 0
+D+
+Text GLabel 1500 2800 0    50   Input ~ 0
+D-
+$Comp
+L power:GND #PWR0115
+U 1 1 615A26BF
+P 1900 3000
+F 0 "#PWR0115" H 1900 2750 50  0001 C CNN
+F 1 "GND" H 1905 2827 50  0000 C CNN
+F 2 "" H 1900 3000 50  0001 C CNN
+F 3 "" H 1900 3000 50  0001 C CNN
+	1    1900 3000
+	1    0    0    -1  
+$EndComp
+NoConn ~ 6850 4650
+NoConn ~ 6850 4750
+Text GLabel 2300 2500 2    50   Input ~ 0
+USB_TX_ESP_RX
+Text GLabel 2300 2600 2    50   Input ~ 0
+USB_RX_ESP_TX
+Text GLabel 850  3950 0    50   Input ~ 0
+VBUS
+$Comp
+L power:GND #PWR0116
+U 1 1 615A651C
+P 1350 4250
+F 0 "#PWR0116" H 1350 4000 50  0001 C CNN
+F 1 "GND" H 1355 4077 50  0000 C CNN
+F 2 "" H 1350 4250 50  0001 C CNN
+F 3 "" H 1350 4250 50  0001 C CNN
+	1    1350 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 2500 1100 2500
+Wire Wire Line
+	1100 2500 1100 3500
+$Comp
+L Device:C_Small C5
+U 1 1 615A82C0
+P 1000 2500
+F 0 "C5" V 748 2500 50  0000 C CNN
+F 1 "470uF" V 839 2500 50  0000 C CNN
+F 2 "BadgePirate:C_0805_2012Metric" H 1000 2500 50  0001 C CNN
+F 3 "~" H 1000 2500 50  0001 C CNN
+	1    1000 2500
+	0    1    1    0   
+$EndComp
+Connection ~ 1100 2500
+$Comp
+L power:GND #PWR0117
+U 1 1 615A9311
+P 900 2500
+F 0 "#PWR0117" H 900 2250 50  0001 C CNN
+F 1 "GND" V 905 2372 50  0000 R CNN
+F 2 "" H 900 2500 50  0001 C CNN
+F 3 "" H 900 2500 50  0001 C CNN
+	1    900  2500
+	0    1    1    0   
+$EndComp
+NoConn ~ 2300 2800
+$Comp
+L power:VCC #PWR0120
+U 1 1 615AF2C2
+P 2300 3950
+F 0 "#PWR0120" H 2300 3800 50  0001 C CNN
+F 1 "VCC" V 2315 4078 50  0000 L CNN
+F 2 "" H 2300 3950 50  0001 C CNN
+F 3 "" H 2300 3950 50  0001 C CNN
+	1    2300 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0122
+U 1 1 615B2AE5
+P 1050 6850
+F 0 "#PWR0122" H 1050 6600 50  0001 C CNN
+F 1 "GND" V 1055 6722 50  0000 R CNN
+F 2 "" H 1050 6850 50  0001 C CNN
+F 3 "" H 1050 6850 50  0001 C CNN
+	1    1050 6850
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push_Dual_x2 SW_Reset1
+U 1 1 615B1B47
+P 1250 6850
+F 0 "SW_Reset1" H 1250 7135 50  0000 C CNN
+F 1 "Reset_Btn" H 1250 7044 50  0000 C CNN
+F 2 "Digi:Switch_Tactile_SMD_B3U-1000P" H 1250 7050 50  0001 C CNN
+F 3 "~" H 1250 7050 50  0001 C CNN
+	1    1250 6850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 6850 1950 6850
+Wire Wire Line
+	1100 3500 2300 3500
+Wire Wire Line
+	2300 3500 2300 3950
+$Comp
+L power:VCC #PWR0118
+U 1 1 615F0A46
+P 1900 2300
+F 0 "#PWR0118" H 1900 2150 50  0001 C CNN
+F 1 "VCC" H 1900 2450 50  0000 C CNN
+F 2 "" H 1900 2300 50  0001 C CNN
+F 3 "" H 1900 2300 50  0001 C CNN
+	1    1900 2300
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	500  550  2950 550 
+Text Notes 2300 5300 0    79   ~ 0
+Power LED
+Text GLabel 2250 6850 2    50   Input ~ 0
+RESET
+Text GLabel 5650 3050 0    50   Input ~ 0
+RESET
+$Comp
+L Device:C_Small C4
+U 1 1 615B5F31
+P 1050 4150
+F 0 "C4" V 821 4150 50  0000 C CNN
+F 1 "1uF" V 912 4150 50  0000 C CNN
+F 2 "BadgePirate:C_0805_2012Metric" H 1050 4150 50  0001 C CNN
+F 3 "~" H 1050 4150 50  0001 C CNN
+	1    1050 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0125
+U 1 1 615BD53B
+P 1050 4250
+F 0 "#PWR0125" H 1050 4000 50  0001 C CNN
+F 1 "GND" H 1055 4077 50  0000 C CNN
+F 2 "" H 1050 4250 50  0001 C CNN
+F 3 "" H 1050 4250 50  0001 C CNN
+	1    1050 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J1
+U 1 1 615D2A6C
+P 1250 7600
+F 0 "J1" H 1278 7576 50  0000 L CNN
+F 1 "Conn_01x02_Female" H 1278 7485 50  0000 L CNN
+F 2 "BadgePirate:PinHeader_1x02_P2.54mm_Vertical" H 1250 7600 50  0001 C CNN
+F 3 "~" H 1250 7600 50  0001 C CNN
+	1    1250 7600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0126
+U 1 1 615D306E
+P 1050 7700
+F 0 "#PWR0126" H 1050 7450 50  0001 C CNN
+F 1 "GND" H 1055 7527 50  0000 C CNN
+F 2 "" H 1050 7700 50  0001 C CNN
+F 3 "" H 1050 7700 50  0001 C CNN
+	1    1050 7700
+	1    0    0    -1  
+$EndComp
+Text GLabel 1050 7600 0    79   Input ~ 0
+VBUS
+Text Notes 2350 8000 0    79   ~ 0
+5v Out
+Wire Notes Line
+	2950 550  2950 8000
+Text Notes 2000 7350 0    79   ~ 0
+Reset Button\n
+Wire Notes Line
+	2950 1950 500  1950
+Wire Notes Line
+	2950 4500 500  4500
+Wire Notes Line
+	2950 5350 500  5350
+Wire Notes Line
+	500  6350 2950 6350
+Wire Notes Line
+	500  7400 2950 7400
+Wire Notes Line
+	2950 8000 500  8000
+Wire Notes Line
+	500  550  500  8000
+$Comp
+L Device:C_Small C3
+U 1 1 6160B57C
+P 1900 4150
+F 0 "C3" H 1992 4196 50  0000 L CNN
+F 1 "1uF" H 1992 4105 50  0000 L CNN
+F 2 "BadgePirate:C_0805_2012Metric" H 1900 4150 50  0001 C CNN
+F 3 "~" H 1900 4150 50  0001 C CNN
+	1    1900 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 6160C012
+P 1900 4250
+F 0 "#PWR0102" H 1900 4000 50  0001 C CNN
+F 1 "GND" H 1905 4077 50  0000 C CNN
+F 2 "" H 1900 4250 50  0001 C CNN
+F 3 "" H 1900 4250 50  0001 C CNN
+	1    1900 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 3950 1900 3950
+Connection ~ 2300 3950
+Wire Wire Line
+	1900 4050 1900 3950
+Connection ~ 1900 3950
+Wire Wire Line
+	1900 3950 2300 3950
+$Comp
+L Device:C_Small C6
+U 1 1 6160FADF
+P 1950 6750
+F 0 "C6" H 2042 6796 50  0000 L CNN
+F 1 "1uF" H 2042 6705 50  0000 L CNN
+F 2 "BadgePirate:C_0805_2012Metric" H 1950 6750 50  0001 C CNN
+F 3 "~" H 1950 6750 50  0001 C CNN
+	1    1950 6750
+	1    0    0    -1  
+$EndComp
+Connection ~ 1950 6850
+Wire Wire Line
+	1950 6850 2250 6850
+$Comp
+L power:GND #PWR0103
+U 1 1 616104BE
+P 1950 6650
+F 0 "#PWR0103" H 1950 6400 50  0001 C CNN
+F 1 "GND" H 1955 6477 50  0000 C CNN
+F 2 "" H 1950 6650 50  0001 C CNN
+F 3 "" H 1950 6650 50  0001 C CNN
+	1    1950 6650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Switch:SW_SPDT SW1
+U 1 1 616975A2
+P 1100 4950
+F 0 "SW1" H 1100 5235 50  0000 C CNN
+F 1 "SW_SPDT" H 1100 5144 50  0000 C CNN
+F 2 "BadgePiratesFootprints:SW_SPDT_CK-JS102011SAQN" H 1100 4950 50  0001 C CNN
+F 3 "~" H 1100 4950 50  0001 C CNN
+	1    1100 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VBUS #PWR0104
+U 1 1 6169B158
+P 1300 5050
+F 0 "#PWR0104" H 1300 4900 50  0001 C CNN
+F 1 "VBUS" V 1315 5178 50  0000 L CNN
+F 2 "" H 1300 5050 50  0001 C CNN
+F 3 "" H 1300 5050 50  0001 C CNN
+	1    1300 5050
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0106
+U 1 1 6169B8DE
+P 900 4950
+F 0 "#PWR0106" H 900 4800 50  0001 C CNN
+F 1 "+5V" V 915 5078 50  0000 L CNN
+F 2 "" H 900 4950 50  0001 C CNN
+F 3 "" H 900 4950 50  0001 C CNN
+	1    900  4950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR0107
+U 1 1 6169CBDD
+P 1850 1500
+F 0 "#PWR0107" H 1850 1350 50  0001 C CNN
+F 1 "+5V" H 1865 1673 50  0000 C CNN
+F 2 "" H 1850 1500 50  0001 C CNN
+F 3 "" H 1850 1500 50  0001 C CNN
+	1    1850 1500
+	-1   0    0    1   
+$EndComp
+NoConn ~ 1300 4850
+Wire Wire Line
+	1050 3950 850  3950
+Wire Wire Line
+	1050 4050 1050 3950
+Connection ~ 1050 3950
+$Comp
+L Connector_Generic:Conn_01x05 J6
+U 1 1 616B7606
+P 9850 2300
+F 0 "J6" H 9930 2342 50  0000 L CNN
+F 1 "Conn_01x05" H 9930 2251 50  0000 L CNN
+F 2 "Digi:PinHeader_1x5_P2.5mm_Drill1.1mm" H 9850 2300 50  0001 C CNN
+F 3 "~" H 9850 2300 50  0001 C CNN
+	1    9850 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x05 J5
+U 1 1 616B871F
+P 9850 1650
+F 0 "J5" H 9930 1692 50  0000 L CNN
+F 1 "Conn_01x05" H 9930 1601 50  0000 L CNN
+F 2 "Digi:PinHeader_1x5_P2.5mm_Drill1.1mm" H 9850 1650 50  0001 C CNN
+F 3 "~" H 9850 1650 50  0001 C CNN
+	1    9850 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J7
+U 1 1 616BA03D
+P 9850 650
+F 0 "J7" H 9930 642 50  0000 L CNN
+F 1 "Conn_01x02" H 9930 551 50  0000 L CNN
+F 2 "Digi:PinHeader_1x2_P2.5mm_Drill1.1mm" H 9850 650 50  0001 C CNN
+F 3 "~" H 9850 650 50  0001 C CNN
+	1    9850 650 
+	1    0    0    -1  
+$EndComp
+Text GLabel 9650 650  0    79   Input ~ 0
+IO46
+Text GLabel 9650 750  0    79   Input ~ 0
+IO45
+$Comp
+L Connector_Generic:Conn_01x04 J4
+U 1 1 616BD901
+P 9850 1050
+F 0 "J4" H 9930 1042 50  0000 L CNN
+F 1 "Conn_01x04" H 9930 951 50  0000 L CNN
+F 2 "Digi:PinHeader_1x4_P2.5mm_Drill1.1mm" H 9850 1050 50  0001 C CNN
+F 3 "~" H 9850 1050 50  0001 C CNN
+	1    9850 1050
+	1    0    0    -1  
+$EndComp
+Text GLabel 9650 2500 0    79   Input ~ 0
+IO13
+Text GLabel 9650 2400 0    79   Input ~ 0
+IO12
+Text GLabel 9650 2300 0    79   Input ~ 0
+IO11
+Text GLabel 9650 2200 0    79   Input ~ 0
+IO10
+Text GLabel 9650 2100 0    79   Input ~ 0
+IO09
+Text GLabel 9650 1850 0    79   Input ~ 0
+IO08
+Text GLabel 9650 1750 0    79   Input ~ 0
+IO07
+Text GLabel 9650 1650 0    79   Input ~ 0
+IO06
+Text GLabel 9650 1550 0    79   Input ~ 0
+IO05
+Text GLabel 9650 1450 0    79   Input ~ 0
+IO04
+Text GLabel 9650 1250 0    79   Input ~ 0
+IO03
+Text GLabel 9650 1150 0    79   Input ~ 0
+IO02
+Text GLabel 9650 1050 0    79   Input ~ 0
+IO01
+Text GLabel 9650 950  0    79   Input ~ 0
+Boot
+Wire Notes Line
+	9150 2700 9150 500 
+Wire Notes Line
+	9150 500  10500 500 
+Wire Notes Line
+	10500 500  10500 2700
+Wire Notes Line
+	9150 2700 10500 2700
+Text GLabel 9650 3350 0    79   Input ~ 0
+IO33
+Text GLabel 9650 3250 0    79   Input ~ 0
+IO34
+Text GLabel 9650 3150 0    79   Input ~ 0
+IO35
+Text GLabel 9650 3050 0    79   Input ~ 0
+IO36
+Text GLabel 9650 2950 0    79   Input ~ 0
+IO37
+Text GLabel 9650 2850 0    79   Input ~ 0
+IO38
+$Comp
+L Connector_Generic:Conn_01x03 J9
+U 1 1 616F30B7
+P 9850 3250
+F 0 "J9" H 9930 3292 50  0000 L CNN
+F 1 "Conn_01x03" H 9930 3201 50  0000 L CNN
+F 2 "Digi:PinHeader_1x3_P2.5mm_Drill1.1mm" H 9850 3250 50  0001 C CNN
+F 3 "~" H 9850 3250 50  0001 C CNN
+	1    9850 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J8
+U 1 1 616F38CB
+P 9850 2950
+F 0 "J8" H 9930 2992 50  0000 L CNN
+F 1 "Conn_01x03" H 9930 2901 50  0000 L CNN
+F 2 "Digi:PinHeader_1x3_P2.5mm_Drill1.1mm" H 9850 2950 50  0001 C CNN
+F 3 "~" H 9850 2950 50  0001 C CNN
+	1    9850 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Female J10
+U 1 1 61906D15
+P 3700 1150
+F 0 "J10" H 3592 925 50  0000 C CNN
+F 1 "Conn_01x01_Female" H 3592 1016 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 3700 1150 50  0001 C CNN
+F 3 "~" H 3700 1150 50  0001 C CNN
+	1    3700 1150
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0112
+U 1 1 61907B8B
+P 3900 1150
+F 0 "#PWR0112" H 3900 900 50  0001 C CNN
+F 1 "GND" H 3905 977 50  0000 C CNN
+F 2 "" H 3900 1150 50  0001 C CNN
+F 3 "" H 3900 1150 50  0001 C CNN
+	1    3900 1150
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
